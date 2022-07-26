@@ -16,7 +16,7 @@
 using Builder;
 using Builder.Builders;
 
-namespace AbstractFactory
+namespace Builder
 {
     public class Program
     {
