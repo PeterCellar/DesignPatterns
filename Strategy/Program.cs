@@ -11,13 +11,27 @@
                             may define an interface that lets Strategy access its data
  */
 
+using Strategy.SortAlgorithms;
+
 namespace Strategy
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-           
+            SortedList studentRecords = new SortedList();
+            studentRecords.Add("Samual");
+            studentRecords.Add("Jimmy");
+            studentRecords.Add("Sandra");
+            studentRecords.Add("Vivek");
+            studentRecords.Add("Anna");
+
+            studentRecords.SetSortStrategy(new QuickSort());
+            studentRecords.Sort();
+
+            studentRecords.SetSortStrategy(new MergeSort());
+            studentRecords.Sort();
+
             Console.ReadKey();
         }
     }
